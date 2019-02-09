@@ -65,6 +65,8 @@ CREATE TABLE `users` (
   `id_user` int(11) NOT NULL,
   `nom` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `prenom` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `mail` varchar(255) COLLATE utf8mb4_bin NOT NULL,
+  `telephone` int(11) COLLATE utf8mb4_bin DEFAULT NULL,
   `num_rue` smallint(6) DEFAULT NULL,
   `adresse` varchar(255) COLLATE utf8mb4_bin NOT NULL,
   `code_postal` smallint(6) NOT NULL,
