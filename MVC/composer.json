@@ -1,0 +1,11 @@
+{
+    "name": "stagiaire/htdocs",
+    "description": "AccessCodeCine",
+    "authors": [{
+        "name": "Boissier",
+        "email": "lucas.boissier25@orange.fr"
+    }],
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}
