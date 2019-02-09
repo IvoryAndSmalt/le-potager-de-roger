@@ -41,7 +41,7 @@ CREATE TABLE `offres` (
   `id_offre` int(11) NOT NULL,
   `url_photo` varchar(5) COLLATE utf8mb4_bin DEFAULT NULL,
   `commentaire` varchar(255) COLLATE utf8mb4_bin NOT NULL,
-  `date_creation` date NOT NULL
+  `date_creation` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- --------------------------------------------------------
