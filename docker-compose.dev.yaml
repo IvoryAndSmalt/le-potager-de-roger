@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  mysql:
+    image: mysql:5.7
+    ports: ["3306:3306"]
+    environment:
+      MYSQL_DATABASE: roger
+      MYSQL_USER: roger
+      MYSQL_PASSWORD: roger2019
+      MYSQL_ROOT_PASSWORD: rogerroot
+    volumes:
+      - "~/mysqldata-dev:/var/lib/mysql"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports: ["3380:80"]
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: roger
+      PMA_PASSWORD: roger2019
