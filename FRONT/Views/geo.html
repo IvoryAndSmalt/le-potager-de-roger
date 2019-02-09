@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/CSS/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center align-items-center">
+            <a href="/" class="navbar-brand w-50 p-0"><img id="logo" src="../Assets/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100 ml-auto" id="collapsingNavbar3">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A Propos</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="btn btn-link" href="#">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="#">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container h-100">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <div class="card border-success mx-auto" style="width: 40rem;">
+                        <div class="card-body">
+                            <form action="submit">
+                                <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                            <label for="Nom">Nom</label>
+                                            <input type="email" class="form-control" id="nom"placeholder="Entrez votre nom">
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <div class="form-group">
+                                                <label for="Nom">Prénom</label>
+                                                <input type="email" class="form-control" id="prenom" placeholder="Entrez votre prénom">
+                                            </div>
+                                    </div>
+                                </div>
+                                    <div class="form-group">
+                                            <label for="Email">Adresse email</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="Pass">Mot de passe</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+                                          </div>
+                                          <div class="form-group">
+                                                <label for="Adresse" id="adr" placeholder="Mon adresse">Adresse</label> 
+                                                <input type="address" class="form-control" id="adr" placeholder="Entrez votre adresse">
+                                              </div>
+                            </form>
+                            <!-- <input id="adr" style="width: 95%; margin: auto" placeholder="Mon adresse" />
+                            <input id="adrloc" name="adrloc" />  Input autocomplétion adresse-->
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+    <script src="https://unpkg.com/leaflet-geosearch@2.7.0/dist/bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/jquery.autocomplete.min.js"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
