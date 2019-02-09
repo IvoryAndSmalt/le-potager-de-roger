@@ -1,0 +1,18 @@
+{
+    "name": "My App",
+    "short_name": "my app",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "ffffff",
+    "description": "My very first App",
+    "icons": [
+        {
+          "src": "assets/img/icon.svg",
+          "sizes": "48x48"
+        },
+        {
+          "src": "assets/img/icon256.png",
+          "sizes": "72x72 96x96 128x128 256x256 512x512"
+        }
+      ]
+}
