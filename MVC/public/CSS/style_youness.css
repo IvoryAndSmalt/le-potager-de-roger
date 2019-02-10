@@ -1,0 +1,26 @@
+
+
+
+.product{
+    width: 100%;
+}
+
+.contact{
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: darkgreen !important;
+    display: block;
+}
+
+.contact:hover{
+    background-color: darkgreen;
+    color: white !important;
+}
+
+.leaflet-popup-content-wrapper a{
+    text-align: center;
+}

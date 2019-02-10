@@ -1,17 +1,11 @@
 <?php
 
 $DB = [
-
-'charset'=>'utf8',
-
-'name'=>'le_potager_de_roger',
-
-'host'=>'localhost',
-
-'login'=>'root',
-
-'passwd'=>'',
-
+  'charset'=> 'utf8',
+  'name'=> 'roger',
+  'host'=> '192.168.2.91',
+  'login'=> 'roger',
+  'passwd'=> 'roger2019',
 ];
 
 // Surcharge config BDD si fichier local présent
