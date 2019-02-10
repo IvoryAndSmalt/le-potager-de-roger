@@ -1,117 +1,57 @@
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="fr">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>geoloc</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/style.css">
     <link rel="stylesheet" href="public/CSS/style_youness.css">
-</head>
+    <title>Le-potager de Roger</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body style="margin:0;">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+            </li>
 
-    <div id="map" style=" width:100vw; height:100vh; ">
-    </div>
-
-
+            <li class="nav-item">
+              <a class="nav-link" href="#">À Propos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav pull-sm-right mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">inscription</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Se Connecter</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container-fluid appli">
+      {% block section %}
+      {% endblock %}
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
-
-
-    <script>
-
-        getLocation();
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                alert('Votre navigateur ne prend pas en compte la géolocalisation');
-            }
-        }
-
-        function showPosition(position) {
-            console.log('latitude ' + position.coords.latitude);
-            console.log('longitude ' + position.coords.longitude);
-
-            var lat = position.coords.latitude;
-            var long = position.coords.longitude;
-
-            var mymap = L.map('map').setView([lat, long], 15);
-
-            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-                maxZoom: 18,
-                id: 'mapbox.streets',
-                accessToken: 'pk.eyJ1IjoiZmF3bGlhIiwiYSI6ImNqYmVxejI1ejI3MG4ydm1vZm9laXVya2QifQ.vUbCBecjNCgy9IEE6pDRaQ'
-            }).addTo(mymap);
-
-            /*mapboxgl.accessToken = 'pk.eyJ1IjoiZmF3bGlhIiwiYSI6ImNqYmVxejI1ejI3MG4ydm1vZm9laXVya2QifQ.vUbCBecjNCgy9IEE6pDRaQ';
-                            const map = new mapboxgl.Map({
-                                container: 'map',
-                                style: 'mapbox://styles/fawlia/cjrxdluqr0szj1fpdkxgmumre',
-                                center: [2.317600, 48.866500],
-                                zoom: 12.0
-                              
-                            });*/
-
-
-            var myIcon = L.icon({
-                iconUrl: 'public/img/marker.png',
-                iconSize: [38, 55],
-                iconAnchor: [18, 28],
-                popupAnchor: [0,0],
-            });
-
-            var myIcon1 = L.icon({
-                iconUrl: 'public/img/user-marker.png',
-                iconSize: [38, 55],
-                iconAnchor: [18, 28],
-                popupAnchor: [0,0],
-            });
-
-            var marker = L.marker([lat,long],{icon: myIcon1}).addTo(mymap);
-
-                {% for user in users %}
-
-                    var a = {{ user.latitude }};
-                    var b =  {{ user.longitude }};
-                    var user_name = "{{user.prenom}}";
-                    
-                    console.log(a);
-                    console.log(b);
-
-                    //marker
-                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("<b>{{user.prenom}}</b> <br> {{user.commentaire}} <br> <img class='product' src='public/img/{{user.url_photo}}' width='175px' height='auto'> <br><br> <a class='contact' href='mailTo:yohann.thorez@gmail.com'> Me contacter </a>").addTo(mymap);
-
-                    // bindpopup
-                    //var marker = L.marker([a,b], {icon: myIcon}).on('click', markerOnClick).addTo(mymap);
-
-                    /*marker.bindPopup(popupContent).openPopup();
-                    var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.'),
-                    denver = L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.'),
-                    aurora = L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.'),
-                    golden = L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.'); */
-                    
-                    /*function markerOnClick(){
-                        var popup = L.popup()
-                            .setLatLng([a,b])
-                            .setContent("Potager de Roger")
-                            .openOn(mymap);
-                    }*/
-
-                    
-                        
-                {% endfor %}
-
-
-        }
-
-
-    </script>
-
-
-
-</body>
-
+    <script src="public/app.js"></script>
+  </body>
 </html>

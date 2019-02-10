@@ -1,0 +1,109 @@
+{% extends "base.html.twig" %}
+
+{% block section %}
+      <div class="row map-infos">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8" id="map"></div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 produits">
+          <div class="infos p-5">
+            <form class="form-inline pt-2 pb-3 my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search"  aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+            <h1>Produit disponible prêt de chez vous</h1>
+            <hr class="style1 mb-3">
+            <div class="liste-produits d-flex justify-content-start align-items-center">
+              <ul>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 produits-mobile">
+          <div class="infos p-2">
+            <form class="form-inline pt-2 pb-3 my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search"  aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+            <h1>Produit disponible prêt de chez vous</h1>
+            <hr class="style1 mb-3">
+            <div class="liste-produits d-flex justify-content-start align-items-center">
+              <ul class="liste">
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+              </ul>
+            </div>
+            <i class="fas close-infos fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <i class="fas show-infos fa-plus"></i>
+      </div>
+      <script>
+
+        getLocation();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert('Votre navigateur ne prend pas en compte la géolocalisation');
+            }
+        }
+
+        function showPosition(position) {
+            console.log('latitude ' + position.coords.latitude);
+            console.log('longitude ' + position.coords.longitude);
+
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+
+            var mymap = L.map('map').setView([lat, long], 15);
+
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                maxZoom: 18,
+                id: 'mapbox.streets',
+                accessToken: 'pk.eyJ1IjoiZmF3bGlhIiwiYSI6ImNqYmVxejI1ejI3MG4ydm1vZm9laXVya2QifQ.vUbCBecjNCgy9IEE6pDRaQ'
+            }).addTo(mymap);
+
+            var myIcon = L.icon({
+                iconUrl: 'public/img/marker.png',
+                iconSize: [38, 55],
+                iconAnchor: [18, 28],
+                popupAnchor: [0,0],
+            });
+
+            var myIcon1 = L.icon({
+                iconUrl: 'public/img/user-marker.png',
+                iconSize: [38, 55],
+                iconAnchor: [18, 28],
+                popupAnchor: [0,0],
+            });
+
+            var marker = L.marker([lat,long],{icon: myIcon1}).addTo(mymap);
+
+                {% for user in users %}
+
+                    var a = {{ user.latitude }};
+                    var b =  {{ user.longitude }};
+                    var user_name = "{{user.prenom}}";
+
+                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("<b>{{user.prenom}}</b> <br> {{user.commentaire}} <br> <img class='product' src='public/img/{{user.url_photo}}' width='175px' height='auto'> <br><br> <a class='contact' href='mailTo:yohann.thorez@gmail.com'> Me contacter </a>").addTo(mymap);
+                {% endfor %}
+        }
+    </script>
+
+{% endblock %}
