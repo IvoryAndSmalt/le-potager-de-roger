@@ -68,12 +68,13 @@
 
                     var a = {{ user.latitude }};
                     var b =  {{ user.longitude }};
+                    var user_name = "{{user.prenom}}";
                     
                     console.log(a);
                     console.log(b);
 
                     //marker
-                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("coucou je m'appelle babar").addTo(mymap);
+                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("coucou je m'appelle : {{user.prenom}}").addTo(mymap);
 
                     // bindpopup
                     //var marker = L.marker([a,b], {icon: myIcon}).on('click', markerOnClick).addTo(mymap);
