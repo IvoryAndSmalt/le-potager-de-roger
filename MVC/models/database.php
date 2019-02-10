@@ -40,7 +40,7 @@ try {
 
  ];
 
-$PDO = new PDO ($req,$DB['login'],$DB['passwd']/*,$options*/);
+$PDO = new PDO ($req,$DB['login'],$DB['passwd'] ,$options);
 
 }
 
