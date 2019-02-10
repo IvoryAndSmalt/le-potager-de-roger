@@ -2,17 +2,27 @@
 
 $DB = [
 
-  'charset'=>'utf8',
+'charset'=>'utf8',
 
-  'name'=>'roger',
+'name'=>'le_potager_de_roger',
 
-  'host'=>'192.168.2.91',
+'host'=>'localhost',
 
-  'login'=>'roger',
+'login'=>'root',
 
-  'passwd'=>'roger2019'
+'passwd'=>'',
 
 ];
+
+// Surcharge config BDD si fichier local présent
+if(is_file(__DIR__ . '/database.local.php')) {
+  include 'database.local.php';
+}
+
+// Surcharge config BDD si variables environnement présentes
+if(getenv('DB_HOST')) {
+  include 'database.env.php';
+}
 
 
 

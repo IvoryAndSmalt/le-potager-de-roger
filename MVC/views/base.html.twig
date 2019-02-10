@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>geoloc</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
-    <link rel="stylesheet" href="public/CSS/style_youness.css">
 </head>
 
 <body style="margin:0;">
@@ -57,20 +56,20 @@
 
 
             var myIcon = L.icon({
-                iconUrl: 'public/img/marker.png',
+                iconUrl: 'marker.png',
                 iconSize: [38, 55],
                 iconAnchor: [18, 28],
                 popupAnchor: [0,0],
             });
 
             var myIcon1 = L.icon({
-                iconUrl: 'public/img/user-marker.png',
+                iconUrl: 'user-marker.png',
                 iconSize: [38, 55],
                 iconAnchor: [18, 28],
                 popupAnchor: [0,0],
             });
 
-            var marker = L.marker([lat,long],{icon: myIcon1}).addTo(mymap);
+            var marker = L.marker([lat,long],{icon: myIcon1}).on('click', markerOnClick).addTo(mymap);
 
                 {% for user in users %}
 
@@ -82,7 +81,7 @@
                     console.log(b);
 
                     //marker
-                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("<b>{{user.prenom}}</b> <br> {{user.commentaire}} <br> <img class='product' src='public/img/{{user.url_photo}}' width='175px' height='auto'> <br><br> <a class='contact' href='mailTo:yohann.thorez@gmail.com'> Me contacter </a>").addTo(mymap);
+                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("<b>{{user.prenom}}</b> <br> {{user.commentaire}} <br> <a href='mailTo:yohann.thorez@gmail.com'> Me contacter </a>").addTo(mymap);
 
                     // bindpopup
                     //var marker = L.marker([a,b], {icon: myIcon}).on('click', markerOnClick).addTo(mymap);
@@ -104,6 +103,12 @@
                         
                 {% endfor %}
 
+                function markerOnClick(){
+                    var popup = L.popup()
+                        .setLatLng([lat,long])
+                        .setContent("Potager de Roger")
+                        .openOn(mymap);
+                }
 
         }
 
