@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,12 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Le-potager de Roger</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -40,17 +41,17 @@
         </div>
       </nav>
     </header>           
-    <section class="container-fluid">
-      <div class="row">
+    <section class="container-fluid appli">
+      <div class="row map-infos">
         <div class="col-12 col-sm-12 col-md-12 col-lg-8" id="map"></div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-4 produits">
-          <div class="infos">
-            <form class="form-inline pt-2 pb-5 my-2 my-lg-0">
+          <div class="infos p-5">
+            <form class="form-inline pt-2 pb-3 my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search"  aria-label="Search">
                 <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
             <h1>Produit disponible prêt de chez vous</h1>
-            <hr class="style1 mb-5">
+            <hr class="style1 mb-3">
             <div class="liste-produits d-flex justify-content-start align-items-center">
               <ul>
                 <li>pommmes</li>
@@ -62,23 +63,35 @@
                 <li>pommmes</li>
                 <li>pommmes</li>
                 <li>pommmes</li>
-                <li>pommmes</li>
               </ul>
-              <ul>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                  <li>pommmes</li>
-                </ul>
             </div>
           </div>
         </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 produits-mobile">
+          <div class="infos p-2">
+            <form class="form-inline pt-2 pb-3 my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search"  aria-label="Search">
+                <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+            <h1>Produit disponible prêt de chez vous</h1>
+            <hr class="style1 mb-3">
+            <div class="liste-produits d-flex justify-content-start align-items-center">
+              <ul class="liste">
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+                <li>pommmes</li>
+              </ul>
+            </div>
+            <i class="fas close-infos fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <i class="fas show-infos fa-plus"></i>
       </div>
     </section> 
     <!-- Optional JavaScript -->
