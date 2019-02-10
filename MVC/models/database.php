@@ -14,6 +14,16 @@ $DB = [
 
 ];
 
+// Surcharge config BDD si fichier local présent
+if(is_file(__DIR__ . '/database.local.php')) {
+  include 'database.local.php';
+}
+
+// Surcharge config BDD si variables environnement présentes
+if(getenv('DB_HOST')) {
+  include 'database.env.php';
+}
+
 
 
 
