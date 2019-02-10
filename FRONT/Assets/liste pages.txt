@@ -1,0 +1,11 @@
+Accueil (Ibra)
+Page connexion : (https://getbootstrap.com/docs/4.2/examples/sign-in/) (Kevin)
+Inscription : Nom, Prénom, Adresse, email, mdp
+Utilisateur : (Ibra)
+A Propos (Kevin) 
+RGPD (Kevin)
+
+Logo Accueil A Propos 				Inscription Connexion
+
+			Mentions Légales
+

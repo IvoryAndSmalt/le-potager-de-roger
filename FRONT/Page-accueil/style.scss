@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+
+    .logo{
+        height: 50px;
+    }
+    .bg-light{
+        box-shadow: 0px 3px 32px #00000061;
+        z-index: 1;
+    
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #51955B;
+        font-weight: bold;
+    }
+    #map{
+        width:100%; 
+        height:100vh;
+        z-index: 0;
+    }
+    .produits{
+        padding: 30px;
+        border: solid 20px #fff;
+        background-color: #8EC2D9;
+        display: none;
+        @media (min-width: 992px) and (max-width: 1199px) { 
+            display: block;
+         }
+         @media (min-width: 1200px) { 
+             display: block;
+         }
+
+        .infos{
+            .btn-light{
+                border: solid 1px #28ab28;
+                color: #28ab28;
+            }
+            h1{
+                color: white;
+                font-weight: bold;
+            }
+            hr.style1{
+                border-top: 1px solid #8c8b8b42;
+            }
+            .liste-produits{
+                li{
+                    list-style: none;
+                    color: white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
