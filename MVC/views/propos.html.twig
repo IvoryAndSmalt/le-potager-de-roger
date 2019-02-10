@@ -1,1 +1,25 @@
-PAGE PROPOS
+{% extends 'base.html.twig' %}
+{% block css %}
+    <link rel="stylesheet" href="public/apropos.css">
+{% endblock %}
+{% block section %}
+    <section class="jumbotron text-center">
+        <div class="container">
+            <img class="header-img img-fluid" src="public/apropos.png" alt="A propos">
+            <p>
+                « Le potager de Roger » est une application permettant aux particuliers de partager les richesses de leur jardin avec leurs
+                voisins proches. </p>
+            <p>Savez-vous, aujourd’hui, qui propose des pommes ou des carottes à côté de chez vous ? Pour la plupart, la réponse
+                sera non. « Le potager de Roger » est né de ce constat. L’objectif est de privilégier les circuits courts,
+                quasiment de la main à la main, entre le petit producteur et le consommateur, réduire son impact écologique
+                tout en évitant le gâchis ou le trop plein, partager avec ses amis, ses voisin… ce sont les objectifs du
+                « Potager de Roger ».</p>
+            <p>L’application vous propose de faire du troc ou tout simplement un don de vos produits en surplus. Vous avez trop
+                de pommes et vous etes agacés de manger des tartes aux pommes tous les jours ? Échangez-les contres des navets
+                ou des radis avec Mme Dupont qui habite à 100 mètres de chez vous. </p>
+        </div>
+    </section>
+    <section class="p-5 d-flex justify-content-center align-items-center">
+      <a href="mentions" class="mention text-center ">MENTIONS LÉGALES</a>
+    </section>
+{% endblock %}

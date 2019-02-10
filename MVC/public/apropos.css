@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  height: 100%; }
+  body header {
+    height: 8vh; }
+    body header .logo {
+      height: 50px; }
+    body header .bg-light {
+      box-shadow: 0px 3px 32px #00000061;
+      z-index: 1;
+      height: 100%; }
+      @media (max-width: 575.98px) {
+        body header .bg-light {
+          height: auto; } }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        body header .bg-light {
+          height: auto; } }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        body header .bg-light {
+          height: auto; } }
+    body header .navbar-light .navbar-nav .nav-link {
+      color: #51955B;
+      font-weight: bold; }
+  body .jumbotron {
+    min-height: 90vh;
+    margin: 0 !important; }
+    body .jumbotron .header-img {
+      padding-bottom: 5vh;
+      padding-top: 5vh;
+      height: 320px; }
+      @media (max-width: 575.98px) {
+        body .jumbotron .header-img {
+          height: auto; } }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        body .jumbotron .header-img {
+          height: auto; } }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        body .jumbotron .header-img {
+          height: auto; } }
+    body .jumbotron p {
+      font-size: 1.1rem; }
+  body .mention {
+    text-decoration: none;
+    color: inherit; }
+
+/*# sourceMappingURL=style.css.map */
