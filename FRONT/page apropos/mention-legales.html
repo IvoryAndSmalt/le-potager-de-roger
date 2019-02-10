@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Le-potager de Roger</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#">À Propos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav pull-sm-right mt-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">inscription</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Se Connecter</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </header>     
+    <section class="jumbotron">
+        <div class="container">
+            <h1 class="mb-5">MENTIONS LÉGALES</h1>
+            <div class="">
+                <h2>PROPRIÉTÉ ET RESPONSABILITÉ ÉDITORIALE</h2>
+                <p>Le présent site est la propriété de : Le Potager de Roger SA, société au capital de 1 100 000 € dont le siège est situé Espace de la Motte, 70000 VESOUL inscrite au Registre du Commerce et des Sociétés de VESOUL-GRAY sous le n° SIREN 424780336.
+                    Le directeur de la publication du présent site est Yohann en sa qualité de PDG.</p>
+                <h2>HÉBERGEMENT</h2> 
+                <p>L’hébergement du site est assuré par la société Onlineformapro.</p> 
+                <h2>DÉCLARATION DU SITE À LA CNIL</h2>
+                <p>Conformément aux dispositions de la loi n°78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, le traitement automatisé des données nominatives réalisé à partir de ce site Internet a fait l’objet d’une déclaration auprès de la Commission Nationale de l’Informatique et des Libertés (CNIL) sous le numéro 704760.</p>
+                <h2>DONNÉES NOMINATIVES</h2> 
+                <p>En application de la Loi n° 78-17 du 6 janvier 1978 relative à l’Informatique, aux Fichiers et aux Libertés, vous disposez des droits d’opposition (art. 26 de la loi), d’accès (art.34 à 38 de la loi) et de rectification (art. 36 de la loi) des données vous concernant.
+
+                    Ainsi, vous pouvez nous contacter pour que soient rectifiées, complétées, mises à jour ou effacées les informations vous concernant qui sont inexactes, incomplètes, équivoques, périmées ou dont la collecte ou l’utilisation, la communication ou la conservation est interdite.
+                    Les informations qui vous concernent sont uniquement destinées à la société Onlineformapro.
+                    
+                    Nous ne transmettons ces informations à aucun tiers (partenaires commerciaux, etc).</p>
+                <h2>COOKIES</h2>
+                <p>L’utilisateur est informé que lors de ses visites sur le site, un cookie peut s’installer automatiquement et être conservé temporairement en mémoire ou sur son disque dur.
+
+                    Un cookie est un élément qui ne permet pas d’identifier l’utilisateur mais sert à l’enregistrement des informations relatives à la navigation de celui-ci sur le site Internet.
+                    
+                    Les utilisateurs du site reconnaissent avoir été informés de cette pratique et autorisent Onlineformapro à l’employer. Ils pourront désactiver ce cookie par l’intermédiaire des paramètres figurant au sein de leur logiciel de navigation.</p>    
+                <h2>PROPRIÉTÉ INTELLECTUELLE</h2>  
+                <p>Le site Internet, sa structure générale, ainsi que les textes, images animées ou non, savoir-faire, dessins, graphismes (…) et tout autre élément composant le site, sont la propriété soit de Onlineformapro soit de Clients qui auront autorisé Onlineformapro à produire leurs données.
+
+                    Toute représentation totale ou partielle de ce site par quelque procédé que ce soit, sans l’autorisation expresse de l’exploitant du site Internet est interdite et constituerait une contrefaçon sanctionnée par les articles L 335-2 et suivants du Code de la propriété intellectuelle.
+                    
+                    Les marques de l’exploitant du site Internet et de ses partenaires, ainsi que les logos figurant sur le site sont des marques (semi-figuratives ou non) déposées.
+                    
+                    Toute reproduction totale ou partielle de ces marques ou de ces logos, effectuée à partir des éléments du site sans l’autorisation expresse de l’exploitant du site Internet ou de son ayant-droit est donc prohibée, au sens de l’article L713-2 du CPI.</p>      
+            </div>
+        </div>
+    </section>      
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <script src="app.js"></script>
+  </body>
+</html>

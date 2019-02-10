@@ -39,5 +39,8 @@ body {
           height: auto; } }
     body .jumbotron p {
       font-size: 1.1rem; }
+  body .mention {
+    text-decoration: none;
+    color: inherit; }
 
 /*# sourceMappingURL=style.css.map */
