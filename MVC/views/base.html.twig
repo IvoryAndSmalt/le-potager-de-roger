@@ -62,7 +62,14 @@
                 popupAnchor: [0,0],
             });
 
-            var marker = L.marker([lat,long],{icon: myIcon}).on('click', markerOnClick).addTo(mymap);
+            var myIcon1 = L.icon({
+                iconUrl: 'user-marker.png',
+                iconSize: [38, 55],
+                iconAnchor: [18, 28],
+                popupAnchor: [0,0],
+            });
+
+            var marker = L.marker([lat,long],{icon: myIcon1}).on('click', markerOnClick).addTo(mymap);
 
                 {% for user in users %}
 
@@ -74,7 +81,7 @@
                     console.log(b);
 
                     //marker
-                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("coucou je m'appelle : {{user.prenom}}").addTo(mymap);
+                    var marker = L.marker([a,b],{icon: myIcon}).bindPopup("<b>{{user.prenom}}</b> <br> {{user.commentaire}} <br> <a href='mailTo:yohann.thorez@gmail.com'> Me contacter </a>").addTo(mymap);
 
                     // bindpopup
                     //var marker = L.marker([a,b], {icon: myIcon}).on('click', markerOnClick).addTo(mymap);
