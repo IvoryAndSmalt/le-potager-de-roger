@@ -9,19 +9,19 @@
                 <input class="form-control mr-sm-2" type="search"  aria-label="Search">
                 <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
-            <h1>Produit disponible prêt de chez vous</h1>
+            <h1>Produits disponibles près de chez vous :</h1>
             <hr class="style1 mb-3">
             <div class="liste-produits d-flex justify-content-start align-items-center">
               <ul>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
+                <li>Pommes</li>
+                <li>Cerises</li>
+                <li>Carottes</li>
+                <li>Navets</li>
+                <li>Pommes de terre</li>
+                <li>Fromage</li>
+                <li>Jus de pomme</li>
+                <li>Choux</li>
+                <li>Champignons</li>
               </ul>
             </div>
           </div>
@@ -32,19 +32,19 @@
                 <input class="form-control mr-sm-2" type="search"  aria-label="Search">
                 <button class="btn btn-light my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
-            <h1>Produit disponible prêt de chez vous</h1>
+            <h1>Produits disponibles près de chez vous :</h1>
             <hr class="style1 mb-3">
             <div class="liste-produits d-flex justify-content-start align-items-center">
               <ul class="liste">
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
-                <li>pommmes</li>
+                 <li>Pommes</li>
+                <li>Cerises</li>
+                <li>Carottes</li>
+                <li>Navets</li>
+                <li>Pommes de terre</li>
+                <li>Fromage</li>
+                <li>Jus de pomme</li>
+                <li>Choux</li>
+                <li>Champignons</li>
               </ul>
             </div>
             <i class="fas close-infos fa-long-arrow-alt-right"></i>
@@ -71,7 +71,7 @@
             var lat = position.coords.latitude;
             var long = position.coords.longitude;
 
-            var mymap = L.map('map').setView([lat, long], 15);
+            var mymap = L.map('map').setView([lat, long], 12);
 
             L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
                 maxZoom: 18,
