@@ -1,18 +1,23 @@
 <?php
 
+$baseURL = $_SERVER['PHP_SELF'];
+$baseExplode = explode('/', $baseURL);
+$lastUri = array_pop($baseExplode);
+$baseURL = implode('/',$baseExplode);
+
 require("models/twig.php");
 require("models/database.php");
 
 $uri = $_SERVER['REQUEST_URI'];
 $uriExplode = explode( "/" , $uri);
-$id=$uriExplode[1];
+$id = array_pop($uriExplode);
 
 session_start();
 
 switch($id){
 
     case "":
-    header('Location: /home');
+    header('Location: '.$baseURL.'/home');
     break;
 
     case "home":
@@ -34,6 +39,6 @@ switch($id){
 
 
     default :
-        header('Location: /home');
+       header('Location: '.$baseURL.'/home');
     exit;       
 }
