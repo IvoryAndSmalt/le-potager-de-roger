@@ -51,6 +51,13 @@ section #users .row .userContent ul li {
   display: flex;
   justify-content: space-around;
 }
+
+section #users .row .userContent ul li .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 section #users .row .userContent ul li .product p {
   text-align: center;
 }
@@ -99,5 +106,6 @@ section #users .row .userContent ul li .btns button {
     width: 137px;
   }
 }
+
 
 /*# sourceMappingURL=utilisateur.css.map */
