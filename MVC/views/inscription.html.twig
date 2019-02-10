@@ -1,1 +1,87 @@
-PAGE INSCRIPTION
+{% extends "base.html.twig" %}
+{% block section %}
+
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="card border-success mx-auto" style="width: 40rem;">
+        <div class="card-body">
+          <form id="formcheck" method="post" action="controllers/inscription.ajax.php">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nom">Nom</label>
+                  <input type="text" class="form-control" name="nom" id="nom" placeholder="Entrez votre nom">
+                  <div id="nom-error"></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Entrez votre prénom">
+                  <div id="prenom-error"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+              <div id="email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Entrez votre mot de passe">
+              <div id="password-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="address" id="addr" placeholder="Mon adresse">Adresse</label>
+              <input type="text" class="form-control" name="address" id="address" placeholder="Entrez votre adresse">
+              <div id="addr-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="S'inscrire">
+              <input type="reset" class="btn btn-success" value="Éffacer">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+  // // a l'envoi du document
+  let form = document.getElementById('formcheck');
+  //
+  // Ecouter > déclancher fonction asynchrone
+
+  // // Ecouter > déclancher fonction asynchrone
+  // form.addEventListener('submit',async function(event){
+  //
+  //     // formate les données du formulaire (Json)
+  //     // event.preventDefault();
+  //     // let data = new FormData(form);
+  //     // fetch : en attente
+  //     // let response = await fetch(form.getAttribute('action'),{
+  //     //   method: 'POST',
+  //     //   headers:{'X-Requested-With':'xmlhttprequest'},
+  //     //   body : data
+  //     // });
+  //     // // erreur réseau
+  //     // if(response.ok === false){
+  //     //   mssg.innerHTML = "NetWork Error " + await response.status;
+  //     // }
+  //     // // afficher result
+  //     // else{
+  //     //   // console.log(response.json());
+  //     //   // console.log(await response.json());
+  //     //   // let message = await response.json();
+  //     //   // console.log('++>'+message);
+  //     //   // let list = message.error;
+  //     //   // for (let error in list ){
+  //     //   //   document.getElementById('error-'+${error}).innerHTML=${list[error]};
+  //     //   // }
+  //     // }
+  // });
+
+  </script>
+
+  {% endblock %}
